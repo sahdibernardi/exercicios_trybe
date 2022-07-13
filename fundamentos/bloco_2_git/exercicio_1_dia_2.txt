@@ -1,0 +1,145 @@
+Last login: Mon Jul 11 12:51:19 on ttys000
+➜  ~ pwd
+/Users/macbook
+➜  ~ ls
+Applications           Downloads              Pictures
+Creative Cloud Files   Library                Public
+Desktop                Movies                 iCloud Drive (Arquivo)
+Documents              Music
+➜  ~ cd documents
+➜  documents ls
+Adobe
+Alexandre Morais da Rosa
+Brio
+Copy of #SouTryber.jpg
+Design Ba.zip (Unzipped Files)
+Direito UFSC
+Editadas
+Electronic Arts
+Face da Praia
+GoToMeeting Chats
+Livros
+Pessoal
+SWTM-2088_Atlassian-Git-Cheatsheet.pdf
+TCC
+github-recovery-codes.txt
+iCloud Photos
+trybe-exercicios
+wetransfer_gatty-extrabold-ttf_2021-08-23_2231
+wetransfer_logo-cdb-_pattern-s-preto-png_2021-08-23_2223
+~$ Os players.docx
+~$Apresentação TCC Sahra.pptx
+~$HC de Lula no STF v2.docx
+~$esta bem atencao no que nao digo.docx
+➜  documents cd trybe-exercicios
+➜  trybe-exercicios git:(master) ✗ ls
+READ.md               ciencia_da_computacao fundamentos
+back_end              front_end
+➜  trybe-exercicios git:(master) ✗ cd fundamentos
+➜  fundamentos git:(master) ✗ cd bloco_2_git
+➜  bloco_2_git git:(master) ✗ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   ../../.gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  bloco_2_git git:(master) ✗ git add .gitignore
+fatal: pathspec '.gitignore' did not match any files
+➜  bloco_2_git git:(master) ✗ cd ..
+➜  fundamentos git:(master) ✗ cd ..
+➜  trybe-exercicios git:(master) ✗ git add .gitignore
+➜  trybe-exercicios git:(master) ✗ git commit -m "adiciona .gitignore vazio"
+[master d061f6d] adiciona .gitignore vazio
+ 1 file changed, 30 deletions(-)
+➜  trybe-exercicios git:(master) git status
+On branch master
+nothing to commit, working tree clean
+➜  trybe-exercicios git:(master) git checkout -b trybe-skills-changes
+Switched to a new branch 'trybe-skills-changes'
+➜  trybe-exercicios git:(trybe-skills-changes) pwd
+/Users/macbook/documents/trybe-exercicios
+➜  trybe-exercicios git:(trybe-skills-changes) cd fundamentos
+➜  fundamentos git:(trybe-skills-changes) cd bloco_2_git
+➜  bloco_2_git git:(trybe-skills-changes) ls
+skills2.txt      trybe_skills.txt
+➜  bloco_2_git git:(trybe-skills-changes) cat >> skills2.txt
+- HTML
+- CSS
+➜  bloco_2_git git:(trybe-skills-changes) ✗ cat skills2.txt
+O que eu vou aprender na Trybe:
+
+- Unix
+- Bash
+- Git
+- HTML
+- CSS
+➜  bloco_2_git git:(trybe-skills-changes) ✗ git add skills2.txt
+➜  bloco_2_git git:(trybe-skills-changes) ✗ git add .
+➜  bloco_2_git git:(trybe-skills-changes) ✗ git commit -m "adiciona 2 habilidades skill2"
+[trybe-skills-changes 1163008] adiciona 2 habilidades skill2
+ 1 file changed, 2 insertions(+)
+➜  bloco_2_git git:(trybe-skills-changes) git push -u origin trybe-skills-changes
+Enter passphrase for key '/Users/macbook/.ssh/id_ed25519':
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 1.40 KiB | 479.00 KiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'trybe-skills-changes' on GitHub by visiting:
+remote:      https://github.com/sahdibernardi/exercicios_trybe/pull/new/trybe-skills-changes
+remote:
+To github.com:sahdibernardi/exercicios_trybe.git
+ * [new branch]      trybe-skills-changes -> trybe-skills-changes
+branch 'trybe-skills-changes' set up to track 'origin/trybe-skills-changes'.
+➜  bloco_2_git git:(trybe-skills-changes) git checkout master
+Switched to branch 'master'
+➜  bloco_2_git git:(master) git pull request
+fatal: 'request' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+➜  bloco_2_git git:(master) ✗ git checkout master
+Already on 'master'
+➜  bloco_2_git git:(master) ✗ git branch
+
+[1]  + 3360 suspended  git branch
+➜  bloco_2_git git:(master) ✗ git checkout -b trybe-skills-updates
+Switched to a new branch 'trybe-skills-updates'
+➜  bloco_2_git git:(trybe-skills-updates) ✗ cat >> skills2.txt
+- Javascript
+➜  bloco_2_git git:(trybe-skills-updates) ✗ cat skills2.txt
+O que eu vou aprender na Trybe:
+
+- Unix
+- Bash
+- Git
+- Javascript
+➜  bloco_2_git git:(trybe-skills-updates) ✗ git add skills2.txt
+➜  bloco_2_git git:(trybe-skills-updates) ✗ sit commit -m "adiciona javascript como skill"
+zsh: command not found: sit
+➜  bloco_2_git git:(trybe-skills-updates) ✗ git commit -m "adiciona javascript como skill"
+[trybe-skills-updates 2742091] adiciona javascript como skill
+ 1 file changed, 1 insertion(+)
+➜  bloco_2_git git:(trybe-skills-updates) ✗ git push -u origin trybe-skills-updates
+Enter passphrase for key '/Users/macbook/.ssh/id_ed25519':
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 466 bytes | 466.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'trybe-skills-updates' on GitHub by visiting:
+remote:      https://github.com/sahdibernardi/exercicios_trybe/pull/new/trybe-skills-updates
+remote:
+To github.com:sahdibernardi/exercicios_trybe.git
+ * [new branch]      trybe-skills-updates -> trybe-skills-updates
+branch 'trybe-skills-updates' set up to track 'origin/trybe-skills-updates'.
+➜  bloco_2_git git:(trybe-skills-updates) ✗
