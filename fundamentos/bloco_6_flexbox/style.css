@@ -51,6 +51,7 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 190px;
+  box-shadow: -8px 5px 5px rgb(124, 124, 124);
 }
 
 .gallery-img {
