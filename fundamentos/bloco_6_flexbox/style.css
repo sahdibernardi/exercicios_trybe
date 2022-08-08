@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  flex-wrap: wrap;
+  background-color: rgb(74, 74, 74);
+  color: white;
+}
+
+.header-img {
+  width: 70px;
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  margin: 10px;
+}
+
+.container-images {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-self: center;
+  align-items:center;
+  justify-content: center;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  background-color: rgb(215, 215, 215);
+  margin: 10px;
+  border-radius: 10px;
+  border: 10px solid rgb(215, 215, 215);
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 190px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.rodape {
+  margin-bottom: 0;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 30px;
+}
