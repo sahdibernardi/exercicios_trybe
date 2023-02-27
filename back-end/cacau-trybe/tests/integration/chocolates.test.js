@@ -23,7 +23,7 @@ describe('Test get method in /chocolates endpoint', function () {
     });
 });
 
-describe('Test get method in /chocolates/brand/:id endpoint', function () {
+describe('Test get method in /chocolates/brand/:brandid endpoint', function () {
     it('Returns the correspondent brand', async function () {
         const output = [
             {id:1, name: 'Mint Intense', brandId:1},
@@ -51,3 +51,23 @@ describe('Test get method in /chocolates/:id endpoint', function () {
           expect(response.body.chocolate).to.deep.equal(output);
     });
 });
+
+describe('test inexisting scenarios', function () {
+    it('in /chocolates/:id, search for inexisting id and returns 404', async function () {
+      const response = await chai
+        .request(app)
+        .get('/chocolates/99');
+
+      expect(response.status).to.be.equal(404);
+      expect(response.body).to.deep.equal({ message: 'This ID do not match a chocolate :( please try another one' })
+    });
+
+    it('in /chocolates/brand/:brandid, search for inexisting id and returns 404', async function () {
+        const response = await chai
+          .request(app)
+          .get('/chocolates/brand/36');
+  
+        expect(response.status).to.be.equal(404);
+        expect(response.body.message).to.deep.equal('This ID do not match any brand :( please try another one')
+      });
+  });
