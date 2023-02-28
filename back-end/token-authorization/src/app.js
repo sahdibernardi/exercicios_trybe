@@ -1,4 +1,5 @@
 const express = require('express');
+require('express-async-errors');
 
 const app = express();
 const apiCredentials = require('./middlewares/apiCredentials'); // imports the file.
@@ -9,4 +10,4 @@ app.use(express.json());
 
 app.use(apiCredentials); 
 
-// custom endpoints which needs the token validation middleware.
+// you can inser here custom endpoints which needs the token validation middleware.
