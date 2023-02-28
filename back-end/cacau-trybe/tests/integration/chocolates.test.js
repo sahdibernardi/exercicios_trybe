@@ -1,3 +1,9 @@
+/* eslint-disable func-names */
+/* eslint-disable semi */
+/* eslint-disable max-len */
+/* eslint-disable comma-dangle */
+/* eslint-disable quote-props */
+/* eslint-disable quotes */
 /* eslint-disable key-spacing */
 /* eslint-disable prefer-arrow-callback */
 const chai = require('chai');
@@ -30,6 +36,7 @@ describe('Test get method in /chocolates/brand/:brandid endpoint', function () {
         const output = [
             // eslint-disable-next-line object-curly-spacing
             {id:1, name: 'Mint Intense', brandId:1},
+            // eslint-disable-next-line object-curly-spacing
             {id:2, name: 'White Coconut', brandId:1},
         ];
 
@@ -44,6 +51,7 @@ describe('Test get method in /chocolates/brand/:brandid endpoint', function () {
 describe('Test get method in /chocolates/:id endpoint', function () {
     it('Returns the correspondent chocolate', async function () {
         const output = {
+            // eslint-disable-next-line comma-spacing
             "id":3,"name":"Mon Chéri","brandId":2
         };
 
