@@ -1,3 +1,5 @@
+/* eslint-disable key-spacing */
+/* eslint-disable prefer-arrow-callback */
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../../src/app');
@@ -26,6 +28,7 @@ describe('Test get method in /chocolates endpoint', function () {
 describe('Test get method in /chocolates/brand/:brandid endpoint', function () {
     it('Returns the correspondent brand', async function () {
         const output = [
+            // eslint-disable-next-line object-curly-spacing
             {id:1, name: 'Mint Intense', brandId:1},
             {id:2, name: 'White Coconut', brandId:1},
         ];
