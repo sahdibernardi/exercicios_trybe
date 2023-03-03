@@ -1,3 +1,7 @@
+/* eslint-disable prefer-arrow-callback */
+/* eslint-disable dot-location */
+/* eslint-disable func-names */
+/* eslint-disable max-lines-per-function */
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const sinon = require('sinon');
@@ -67,6 +71,35 @@ describe('Testing people endpoints', function () {
     expect(response.body).to.deep.equal(peopleList[0]);
   });
 
+  it('Testing altering people with id equals 1', async function () {
+    sinon.stub(connection, 'execute').resolves([{ affectedRows: 1 }]);
+    const response = await chai
+      .request(app)
+      .put('/people/1')
+      .send(
+        {
+          firstName: 'Darth',
+          lastName: 'Vader',
+          email: 'darthvader@gmail.com',
+          phone: '851 678 4453',
+        },
+      );
+
+    expect(response.status).to.equal(200);
+    expect(response.body).to
+      .deep.equal({ message: 'Data from person with id 1 was successfully altered' });
+  });
+
+  it('Testing excluding persion with id equals 1', async function () {
+    sinon.stub(connection, 'execute').resolves([{ affectedRows: 1 }]);
+    const response = await chai
+      .request(app)
+      .delete('/people/1');
+
+    expect(response.status).to.equal(200);
+    expect(response.body).to
+      .deep.equal({ message: 'Person with id 1 was successfully excluded' });
+  });
 
   afterEach(sinon.restore);
 });
